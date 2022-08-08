@@ -1,1 +1,1 @@
-# Campus-Gardens-Map
+# Campus Gardens Map
