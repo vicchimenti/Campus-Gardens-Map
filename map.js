@@ -312,13 +312,13 @@
     var championshipFieldObj = {linkId: championshipFieldLink, linkName: 'Championship Field Varsity Soccer', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(championshipFieldLink, 'click', function() {
-        map.setZoom(19);
+        map.setZoom(17);
         map.setCenter(championshipFieldMarker.getPosition());
         modifyTextBox(2, championshipFieldObj.linkName, championshipFieldObj.linkDesc);
     });
     // create click listener for marker
     championshipFieldtMarker.addListener('click', function() {
-        map.setZoom(19);
+        map.setZoom(17);
         map.setCenter(championshipFieldMarker.getPosition());
         modifyTextBox(2, championshipFieldObj.linkName, championshipFieldObj.linkDesc);
         $("#PinLabel").hide();
