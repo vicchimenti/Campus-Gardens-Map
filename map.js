@@ -353,13 +353,13 @@
     var universityParkObj = {linkId: universityParkLink, linkName: 'University Park', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(universityParkLink, 'click', function() {
-        map.setZoom(19);
+        map.setZoom(18);
         map.setCenter(universityParkMarker.getPosition());
         modifyTextBox(2, universityParkObj.linkName, universityParkObj.linkDesc);
     });
     // create click listener for marker
     universityParkMarker.addListener('click', function() {
-        map.setZoom(19);
+        map.setZoom(18);
         map.setCenter(universityParkMarker.getPosition());
         modifyTextBox(2, universityParkObj.linkName, universityParkObj.linkDesc);
         $("#PinLabel").hide();
