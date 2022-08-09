@@ -32,7 +32,7 @@
      $("#POITextBox h5").css("color", "#333333");
     }
     // Text Box Margins
-    var margin = ($("#POITextBox").height() * -1) - 30;
+    let margin = ($("#POITextBox").height() * -1) - 30;
     $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
   }
   // *** End of Floating InfoWindow  ***  //
@@ -61,7 +61,7 @@
       $("#PinLabel h5").css("color", "#333333");
     }
     // Pin Label Margins
-    var margin = ($("#PinLabel").height() * -1) - 30;
+    let margin = ($("#PinLabel").height() * -1) - 30;
     $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
   }
   
@@ -103,13 +103,13 @@
   function initMap() {
 
     //  ***  Campus Primary Location  ***  //
-    var seattleu = {
+    let seattleu = {
         lat: 47.610399,
         lng: -122.318070
     }
 
     //  ***  Campus Map Control Settings  ***  //
-    var map = new google.maps.Map(document.getElementById('SeattlePOIMap'), {
+    let map = new google.maps.Map(document.getElementById('SeattlePOIMap'), {
         center: seattleu,
         streetViewControl: false,
         scaleControl: true,
@@ -206,7 +206,7 @@
     //  *** Map markers start ***  //
 
     //  *** Map marker url list start ***  //
-    var icons = {
+    let icons = {
         // SU Icon
         seattleUIcon: {
         icon: 'https://www.seattleu.edu/media/graduate-admissions/images/graduate-viewbook/sulogo.png'
@@ -230,7 +230,7 @@
     //  ***  click listeners for map icons ***  //
 
     //  *** Seattle University Main Campus Marker ***  //
-    var seattleuMarker = new google.maps.Marker({
+    let seattleuMarker = new google.maps.Marker({
         position: seattleu,
         icon: icons['seattleUIcon'].icon,
         map: map,
@@ -255,7 +255,7 @@
 
 
     //  ***  Cisco Morris   ***  //
-    var ciscoMorrisMarker = new google.maps.Marker({
+    let ciscoMorrisMarker = new google.maps.Marker({
         position: {
         lat: 47.609861,
         lng: -122.319890
@@ -264,9 +264,9 @@
         map: map,
     });
     // create variable to store b-coloumn link ID
-    var ciscoMorrisLink = document.getElementById('ciscoMorris');
+    let ciscoMorrisLink = document.getElementById('ciscoMorris');
     // create object to store Info Box attributes
-    var ciscoMorrisObj = {linkId: ciscoMorrisLink, linkName: 'Cisco Morris Biodiversity', linkDesc: "Description goes here"};
+    let ciscoMorrisObj = {linkId: ciscoMorrisLink, linkName: 'Cisco Morris Biodiversity', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(ciscoMorrisLink, 'click', function() {
         map.setZoom(19);
@@ -295,7 +295,7 @@
 
 
     //  *** Lee Miley Rain Garden  ***  //
-    var rainGardenMarker = new google.maps.Marker({
+    let rainGardenMarker = new google.maps.Marker({
         position: {
         lat: 47.611839,
         lng: -122.317916
@@ -304,9 +304,9 @@
         map: map,
     });
     // create variable to store b-coloumn link ID
-    var rainGardenLink = document.getElementById('rainGarden');
+    let rainGardenLink = document.getElementById('rainGarden');
     // create object to store Info Box attributes
-    var rainGardenObj = {linkId: rainGardenLink, linkName: 'Lee Miley Rain Garden', linkDesc: "Description goes here"};
+    let rainGardenObj = {linkId: rainGardenLink, linkName: 'Lee Miley Rain Garden', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(rainGardenLink, 'click', function() {
         map.setZoom(17);
@@ -335,7 +335,7 @@
 
 
     //  ***  VHILB Ethnobotanical  ***  //
-    var VHILBMarker = new google.maps.Marker({
+    let VHILBMarker = new google.maps.Marker({
         position: {
         lat: 47.608208,
         lng: -122.319225
@@ -344,9 +344,9 @@
         map: map,
     });
     // create variable to store b-coloumn link ID
-    var VHILBLink = document.getElementById('VHILB');
+    let VHILBLink = document.getElementById('VHILB');
     // create object to store Info Box attributes
-    var VHILBObj = {linkId: VHILBLink, linkName: 'Vi Hilbert Ethnobotanical Garden', linkDesc: "Description goes here"};
+    let VHILBObj = {linkId: VHILBLink, linkName: 'Vi Hilbert Ethnobotanical Garden', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(VHILBLink, 'click', function() {
         map.setZoom(18);
@@ -375,7 +375,7 @@
 
 
     //  ***  Edible Campus  ***  //
-    var edibleCampusMarker = new google.maps.Marker({
+    let edibleCampusMarker = new google.maps.Marker({
         position: {
         lat: 47.606957,
         lng: -122.318012
@@ -384,9 +384,9 @@
         map: map,
     });
     // create variable to store b-coloumn link ID
-    var edibleCampusLink = document.getElementById('edibleCampus');
+    let edibleCampusLink = document.getElementById('edibleCampus');
     // create object to store Info Box attributes
-    var edibleCampusObj = {linkId: edibleCampusLink, linkName: 'Edible Campus', linkDesc: "Description goes here"};
+    let edibleCampusObj = {linkId: edibleCampusLink, linkName: 'Edible Campus', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(edibleCampusLink, 'click', function() {
         map.setZoom(19);
@@ -415,7 +415,7 @@
 
 
     //  ***  Kubota Gardens  ***  //
-    var kubotaLegacyMarker = new google.maps.Marker({
+    let kubotaLegacyMarker = new google.maps.Marker({
         position: {
         lat: 47.512419,
         lng: -122.265348
@@ -424,9 +424,9 @@
         map: map,
     });
     // create variable to store b-coloumn link ID
-    var kubotaLegacyLink = document.getElementById('kubotaLegacy');
+    let kubotaLegacyLink = document.getElementById('kubotaLegacy');
     // create object to store Info Box attributes
-    var kubotaLegacyObj = {linkId: kubotaLegacyLink, linkName: 'Kubota Legacy Garden', linkDesc: "Description goes here"};
+    let kubotaLegacyObj = {linkId: kubotaLegacyLink, linkName: 'Kubota Legacy Garden', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(kubotaLegacyLink, 'click', function() {
         map.setZoom(14);
@@ -455,7 +455,7 @@
 
 
     //  ***  Championship Field Varsity Soccer  ***  //
-    var championshipFieldMarker = new google.maps.Marker({
+    let championshipFieldMarker = new google.maps.Marker({
         position: {
         lat: 47.6067,
         lng: -122.314815
@@ -465,9 +465,9 @@
     });
 
     // create variable to store b-coloumn link ID
-    var championshipFieldLink = document.getElementById('championshipField');
+    let championshipFieldLink = document.getElementById('championshipField');
     // create object to store Info Box attributes
-    var championshipFieldObj = {linkId: championshipFieldLink, linkName: 'Championship Field Varsity Soccer', linkDesc: "Description goes here"};
+    let championshipFieldObj = {linkId: championshipFieldLink, linkName: 'Championship Field Varsity Soccer', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(championshipFieldLink, 'click', function() {
         map.setZoom(17);
@@ -496,7 +496,7 @@
 
 
     //  ***  Seattle University Park  ***  //
-    var universityParkMarker = new google.maps.Marker({
+    let universityParkMarker = new google.maps.Marker({
         position: {
         lat: 47.607333,
         lng: -122.317648
@@ -505,9 +505,9 @@
         map: map,
     });
     // create variable to store b-coloumn link ID
-    var universityParkLink = document.getElementById('universityPark');
+    let universityParkLink = document.getElementById('universityPark');
     // create object to store Info Box attributes
-    var universityParkObj = {linkId: universityParkLink, linkName: 'University Park', linkDesc: "Description goes here"};
+    let universityParkObj = {linkId: universityParkLink, linkName: 'University Park', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(universityParkLink, 'click', function() {
         map.setZoom(18);
@@ -536,7 +536,7 @@
 
 
     //  ***  Logan Field Varsity Softball  ***  //
-    var loganFieldMarker = new google.maps.Marker({
+    let loganFieldMarker = new google.maps.Marker({
         position: {
         lat: 47.606881,
         lng: -122.317391
@@ -545,9 +545,9 @@
         map: map,
     });
     // create variable to store b-coloumn link ID
-    var loganFieldLink = document.getElementById('loganField');
+    let loganFieldLink = document.getElementById('loganField');
     // create object to store Info Box attributes
-    var loganFieldObj = {linkId: loganFieldLink, linkName: 'Logan Field Varsity Softball', linkDesc: "Description goes here"};
+    let loganFieldObj = {linkId: loganFieldLink, linkName: 'Logan Field Varsity Softball', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(loganFieldLink, 'click', function() {
         map.setZoom(18);
