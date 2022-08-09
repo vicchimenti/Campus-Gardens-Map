@@ -100,7 +100,7 @@
   } 
   
   //  *** Implementation of initialize function ***  //
-  function initialize() {
+  function initMap() {
 
     //  ***  Campus Primary Location  ***  //
     var seattleu = {
@@ -344,7 +344,9 @@
 
 }
 
-  initialize();
+window.initMap = initMap;
+
+//   initialize();
   
   
 
