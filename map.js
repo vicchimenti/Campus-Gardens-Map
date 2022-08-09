@@ -1,5 +1,11 @@
-// *** Begin Google Map JS ***  //
-// *** Last Modified 5/5/22 *** ///
+/***
+ *  @file map.js
+ *      Media Library ID: 4181392
+ * 
+ *  @see SU Grounds Map
+ *  Google Map JS API
+ * 
+ */
 
 
 
@@ -274,4 +280,11 @@
 }
 
   initialize();
-  //eof
+  
+  
+
+/***
+ *  Media Library ID: 4181392
+ *  map.js
+ * 
+ */
