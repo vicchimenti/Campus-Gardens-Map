@@ -251,7 +251,165 @@
         $("#POITextBox").hide();
     });
 
-    //  *** Significan Gardens/yellow Markers start ***  //
+
+
+
+    //  ***  Cisco Morris   ***  //
+    var ciscoMorrisMarker = new google.maps.Marker({
+        position: {
+        lat: 47.609861,
+        lng: -122.319890
+        },
+        icon: icons['significantGardensIcon'].icon,
+        map: map,
+    });
+    // create variable to store b-coloumn link ID
+    var ciscoMorrisLink = document.getElementById('ciscoMorris');
+    // create object to store Info Box attributes
+    var ciscoMorrisObj = {linkId: ciscoMorrisLink, linkName: 'Cisco Morris Biodiversity', linkDesc: "Description goes here"};
+    // create dom listener for b-coloumn anchor link
+    google.maps.event.addDomListener(ciscoMorrisLink, 'click', function() {
+        map.setZoom(19);
+        map.setCenter(ciscoMorrisMarker.getPosition());
+        modifyTextBox(0, ciscoMorrisObj.linkName, ciscoMorrisObj.linkDesc);
+    });
+    // create click listener for marker
+    ciscoMorrisMarker.addListener('click', function() {
+        map.setZoom(19);
+        map.setCenter(ciscoMorrisMarker.getPosition());
+        modifyTextBox(0, ciscoMorrisObj.linkName, ciscoMorrisObj.linkDesc);
+        $("#PinLabel").hide();
+        openKey(1);
+    });
+    // create mouseover listener for marker label
+    ciscoMorrisMarker.addListener('mouseover', function() {
+        modifyPinLabel(0, "Significant Gardens", ciscoMorrisObj.linkName);
+        $("#POITextBox").hide();
+    });
+    // Click Listener for Pin Labels
+    ciscoMorrisMarker.addListener('mouseout', function() {
+        $("#PinLabel").hide();
+    });
+
+    //  *** Lee Miley Rain Garden  ***  //
+    var rainGardenMarker = new google.maps.Marker({
+        position: {
+        lat: 47.611839,
+        lng: -122.317916
+        },
+        icon: icons['significantGardensIcon'].icon,
+        map: map,
+    });
+    // create variable to store b-coloumn link ID
+    var rainGardenLink = document.getElementById('rainGarden');
+    // create object to store Info Box attributes
+    var rainGardenObj = {linkId: rainGardenLink, linkName: 'Lee Miley Rain Garden', linkDesc: "Description goes here"};
+    // create dom listener for b-coloumn anchor link
+    google.maps.event.addDomListener(rainGardenLink, 'click', function() {
+        map.setZoom(19);
+        map.setCenter(rainGardenMarker.getPosition());
+        modifyTextBox(0, rainGardenObj.linkName, rainGardenObj.linkDesc);
+    });
+    // create click listener for marker
+    rainGardenMarker.addListener('click', function() {
+        map.setZoom(19);
+        map.setCenter(rainGardenMarker.getPosition());
+        modifyTextBox(0, rainGardenObj.linkName, rainGardenObj.linkDesc);
+        $("#PinLabel").hide();
+        openKey(1);
+    });
+    // create mouseover listener for marker label
+    rainGardenMarker.addListener('mouseover', function() {
+        modifyPinLabel(0, "Significant Gardens", rainGardenObj.linkName);
+        $("#POITextBox").hide();
+    });
+    // Click Listener for Pin Labels
+    rainGardenMarker.addListener('mouseout', function() {
+        $("#PinLabel").hide();
+    });
+
+
+
+
+    //  ***  VHILB Ethnobotanical  ***  //
+    var VHILBMarker = new google.maps.Marker({
+        position: {
+        lat: 47.608208,
+        lng: -122.319225
+        },
+        icon: icons['significantGardensIcon'].icon,
+        map: map,
+    });
+    // create variable to store b-coloumn link ID
+    var VHILBLink = document.getElementById('VHILB');
+    // create object to store Info Box attributes
+    var VHILBObj = {linkId: VHILBLink, linkName: 'Vi Hilbert Ethnobotanical Garden', linkDesc: "Description goes here"};
+    // create dom listener for b-coloumn anchor link
+    google.maps.event.addDomListener(VHILBLink, 'click', function() {
+        map.setZoom(19);
+        map.setCenter(VHILBMarker.getPosition());
+        modifyTextBox(0, VHILBObj.linkName, VHILBObj.linkDesc);
+    });
+    // create click listener for marker
+    VHILBMarker.addListener('click', function() {
+        map.setZoom(19);
+        map.setCenter(VHILBMarker.getPosition());
+        modifyTextBox(0, VHILBObj.linkName, VHILBObj.linkDesc);
+        $("#PinLabel").hide();
+        openKey(1);
+    });
+    // create mouseover listener for marker label
+    VHILBMarker.addListener('mouseover', function() {
+        modifyPinLabel(0, "Significant Gardens", VHILBObj.linkName);
+        $("#POITextBox").hide();
+    });
+    // Click Listener for Pin Labels
+    VHILBMarker.addListener('mouseout', function() {
+        $("#PinLabel").hide();
+    });
+
+
+
+    
+    //  ***  Edible Campus  ***  //
+    var edibleCampusMarker = new google.maps.Marker({
+        position: {
+        lat: 47.606957,
+        lng: -122.318012
+        },
+        icon: icons['significantGardensIcon'].icon,
+        map: map,
+    });
+    // create variable to store b-coloumn link ID
+    var edibleCampusLink = document.getElementById('edibleCampus');
+    // create object to store Info Box attributes
+    var edibleCampusObj = {linkId: edibleCampusLink, linkName: 'Edible Campus', linkDesc: "Description goes here"};
+    // create dom listener for b-coloumn anchor link
+    google.maps.event.addDomListener(edibleCampusLink, 'click', function() {
+        map.setZoom(19);
+        map.setCenter(edibleCampusMarker.getPosition());
+        modifyTextBox(0, edibleCampusObj.linkName, edibleCampusObj.linkDesc);
+    });
+    // create click listener for marker
+    edibleCampusMarker.addListener('click', function() {
+        map.setZoom(19);
+        map.setCenter(edibleCampusMarker.getPosition());
+        modifyTextBox(0, edibleCampusObj.linkName, edibleCampusObj.linkDesc);
+        $("#PinLabel").hide();
+        openKey(1);
+    });
+    // create mouseover listener for marker label
+    edibleCampusMarker.addListener('mouseover', function() {
+        modifyPinLabel(0, "Significant Gardens", edibleCampusObj.linkName);
+        $("#POITextBox").hide();
+    });
+    // Click Listener for Pin Labels
+    edibleCampusMarker.addListener('mouseout', function() {
+        $("#PinLabel").hide();
+    });
+
+
+
 
     //  ***  Kubota Gardens  ***  //
     var kubotaLegacyMarker = new google.maps.Marker({
@@ -289,12 +447,8 @@
     kubotaLegacyMarker.addListener('mouseout', function() {
         $("#PinLabel").hide();
     });
-    //  *** Notable Trees Markers end ***  //
 
 
-
-
-    //  *** Athletic Fields/red Markers start ***  //
 
 
     //  ***  Championship Field Varsity Soccer  ***  //
