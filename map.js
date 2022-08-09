@@ -247,13 +247,13 @@
     var kubotaLegacyObj = {linkId: kubotaLegacyLink, linkName: 'Kubota Legacy Garden', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(kubotaLegacyLink, 'click', function() {
-        map.setZoom(19);
+        map.setZoom(14);
         map.setCenter(kubotaLegacyMarker.getPosition());
         modifyTextBox(0, kubotaLegacyObj.linkName, kubotaLegacyObj.linkDesc);
     });
     // create click listener for marker
     kubotaLegacyMarker.addListener('click', function() {
-        map.setZoom(19);
+        map.setZoom(14);
         map.setCenter(kubotaLegacyMarker.getPosition());
         modifyTextBox(0, kubotaLegacyObj.linkName, kubotaLegacyObj.linkDesc);
         $("#PinLabel").hide();
