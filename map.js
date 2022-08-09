@@ -376,6 +376,49 @@
     });
 
 
+
+
+    //  ***  Logan Field Varsity Softball  ***  //
+    var loganFieldMarker = new google.maps.Marker({
+        position: {
+        lat: 47.606881,
+        lng: -122.317391
+        },
+        icon: icons['athleticFieldsIcon'].icon,
+        map: map,
+    });
+    // create variable to store b-coloumn link ID
+    var loganFieldLink = document.getElementById('loganField');
+    // create object to store Info Box attributes
+    var loganFieldObj = {linkId: loganFieldLink, linkName: 'Logan Field Varsity Softball', linkDesc: "Description goes here"};
+    // create dom listener for b-coloumn anchor link
+    google.maps.event.addDomListener(loganFieldLink, 'click', function() {
+        map.setZoom(19);
+        map.setCenter(loganFieldMarker.getPosition());
+        modifyTextBox(2, loganFieldObj.linkName, loganFieldObj.linkDesc);
+    });
+    // create click listener for marker
+    loganFieldMarker.addListener('click', function() {
+        map.setZoom(19);
+        map.setCenter(loganFieldMarker.getPosition());
+        modifyTextBox(2, loganFieldObj.linkName, loganFieldObj.linkDesc);
+        $("#PinLabel").hide();
+        openKey(3);
+    });
+    // create mouseover listener for marker label
+    loganFieldMarker.addListener('mouseover', function() {
+        modifyPinLabel(2, "Athletic Fields", loganFieldObj.linkName);
+        $("#POITextBox").hide();
+    });
+    // Click Listener for Pin Labels
+    loganFieldMarker.addListener('mouseout', function() {
+        $("#PinLabel").hide();
+    });
+
+
+//  *** Athletic Fields Markers end ***  //
+
+
     
 
     //  *** End of Google Map JavaScript ***  //
