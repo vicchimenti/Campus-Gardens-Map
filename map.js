@@ -270,6 +270,50 @@
     });
 
 
+
+    //  *** Notable Trees Markers end ***  //
+
+
+    //  *** Athletic Fields/red Markers start ***  //
+
+    //  ***  Championship Field Varsity Soccer  ***  //
+    var championshipFieldMarker = new google.maps.Marker({
+        position: {
+        lat: 47.606935,
+        lng: -122.314815
+        },
+        icon: icons['athleticFieldsIcon'].icon,
+        map: map,
+    });
+    // create variable to store b-coloumn link ID
+    var championshipFieldLink = document.getElementById('championshipField');
+    // create object to store Info Box attributes
+    var championshipFieldObj = {linkId: championshipFieldLink, linkName: 'Championship Field Varsity Soccer', linkDesc: "Description goes here"};
+    // create dom listener for b-coloumn anchor link
+    google.maps.event.addDomListener(championshipFieldLink, 'click', function() {
+        map.setZoom(19);
+        map.setCenter(championshipFieldMarker.getPosition());
+        modifyTextBox(2, championshipFieldObj.linkName, championshipFieldObj.linkDesc);
+    });
+    // create click listener for marker
+    championshipFieldtMarker.addListener('click', function() {
+        map.setZoom(19);
+        map.setCenter(championshipFieldMarker.getPosition());
+        modifyTextBox(2, championshipFieldObj.linkName, championshipFieldObj.linkDesc);
+        $("#PinLabel").hide();
+        openKey(3);
+    });
+    // create mouseover listener for marker label
+    championshipFieldMarker.addListener('mouseover', function() {
+        modifyPinLabel(2, "Athletic Fields", championshipFieldObj.linkName);
+        $("#POITextBox").hide();
+    });
+    // Click Listener for Pin Labels
+    championshipFieldMarker.addListener('mouseout', function() {
+        $("#PinLabel").hide();
+    });
+
+
     
 
     //  *** End of Google Map JavaScript ***  //
