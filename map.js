@@ -162,10 +162,25 @@
         }, {
         // Parks
         "featureType": "poi.park",
+        "elementType": "all",
         "stylers": [{
             "visibility": "off"
         }],
         }, {
+        // School
+        "featureType": "poi.school",
+        "elementType": "all",
+        "stylers": [{
+            "visibility": "off"
+        }],
+        }, {
+        // School
+        "featureType": "poi.sports_complex",
+        "elementType": "all",
+        "stylers": [{
+            "visibility": "off"
+        }],
+        },{
         // Water
         "featureType": "water",
         "elementType": "all",
