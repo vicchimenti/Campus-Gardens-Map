@@ -300,7 +300,7 @@
     //  ***  Championship Field Varsity Soccer  ***  //
     var championshipFieldMarker = new google.maps.Marker({
         position: {
-        lat: 47.606935,
+        lat: 47.6067,
         lng: -122.314815
         },
         icon: icons['athleticFieldsIcon'].icon,
@@ -317,7 +317,7 @@
         modifyTextBox(2, championshipFieldObj.linkName, championshipFieldObj.linkDesc);
     });
     // create click listener for marker
-    championshipFieldtMarker.addListener('click', function() {
+    championshipFieldMarker.addListener('click', function() {
         map.setZoom(17);
         map.setCenter(championshipFieldMarker.getPosition());
         modifyTextBox(2, championshipFieldObj.linkName, championshipFieldObj.linkDesc);
