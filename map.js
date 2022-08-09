@@ -162,9 +162,9 @@
         }, {
         // Parks
         "featureType": "poi.park",
-        "elementType": "all",
+        "elementType": "labels.icon",
         "stylers": [{
-            "visibility": "on"
+            "visibility": "off"
         }],
         }, {
         // School
