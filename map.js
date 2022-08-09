@@ -271,13 +271,13 @@
     var rainGardenObj = {linkId: rainGardenLink, linkName: 'Lee Miley Rain Garden', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(rainGardenLink, 'click', function() {
-        map.setZoom(19);
+        map.setZoom(17);
         map.setCenter(rainGardenMarker.getPosition());
         modifyTextBox(0, rainGardenObj.linkName, rainGardenObj.linkDesc);
     });
     // create click listener for marker
     rainGardenMarker.addListener('click', function() {
-        map.setZoom(19);
+        map.setZoom(17);
         map.setCenter(rainGardenMarker.getPosition());
         modifyTextBox(0, rainGardenObj.linkName, rainGardenObj.linkDesc);
         $("#PinLabel").hide();
@@ -311,13 +311,13 @@
     var VHILBObj = {linkId: VHILBLink, linkName: 'Vi Hilbert Ethnobotanical Garden', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(VHILBLink, 'click', function() {
-        map.setZoom(19);
+        map.setZoom(18);
         map.setCenter(VHILBMarker.getPosition());
         modifyTextBox(0, VHILBObj.linkName, VHILBObj.linkDesc);
     });
     // create click listener for marker
     VHILBMarker.addListener('click', function() {
-        map.setZoom(19);
+        map.setZoom(18);
         map.setCenter(VHILBMarker.getPosition());
         modifyTextBox(0, VHILBObj.linkName, VHILBObj.linkDesc);
         $("#PinLabel").hide();
