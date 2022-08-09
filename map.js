@@ -289,13 +289,13 @@
     kubotaLegacyMarker.addListener('mouseout', function() {
         $("#PinLabel").hide();
     });
-
-
-
     //  *** Notable Trees Markers end ***  //
 
 
+
+
     //  *** Athletic Fields/red Markers start ***  //
+
 
     //  ***  Championship Field Varsity Soccer  ***  //
     var championshipFieldMarker = new google.maps.Marker({
@@ -306,6 +306,7 @@
         icon: icons['athleticFieldsIcon'].icon,
         map: map,
     });
+
     // create variable to store b-coloumn link ID
     var championshipFieldLink = document.getElementById('championshipField');
     // create object to store Info Box attributes
@@ -331,6 +332,46 @@
     });
     // Click Listener for Pin Labels
     championshipFieldMarker.addListener('mouseout', function() {
+        $("#PinLabel").hide();
+    });
+
+
+
+
+    //  ***  Seattle University Park  ***  //
+    var universityParkMarker = new google.maps.Marker({
+        position: {
+        lat: 47.607333,
+        lng: -122.317648
+        },
+        icon: icons['athleticFieldsIcon'].icon,
+        map: map,
+    });
+    // create variable to store b-coloumn link ID
+    var universityParkLink = document.getElementById('universityPark');
+    // create object to store Info Box attributes
+    var universityParkObj = {linkId: universityParkLink, linkName: 'University Park', linkDesc: "Description goes here"};
+    // create dom listener for b-coloumn anchor link
+    google.maps.event.addDomListener(universityParkLink, 'click', function() {
+        map.setZoom(19);
+        map.setCenter(universityParkMarker.getPosition());
+        modifyTextBox(2, universityParkObj.linkName, universityParkObj.linkDesc);
+    });
+    // create click listener for marker
+    universityParkMarker.addListener('click', function() {
+        map.setZoom(19);
+        map.setCenter(universityParkMarker.getPosition());
+        modifyTextBox(2, universityParkObj.linkName, universityParkObj.linkDesc);
+        $("#PinLabel").hide();
+        openKey(3);
+    });
+    // create mouseover listener for marker label
+    universityParkMarker.addListener('mouseover', function() {
+        modifyPinLabel(2, "Athletic Fields", universityParkObj.linkName);
+        $("#POITextBox").hide();
+    });
+    // Click Listener for Pin Labels
+    universityParkMarker.addListener('mouseout', function() {
         $("#PinLabel").hide();
     });
 
