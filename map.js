@@ -138,12 +138,7 @@
         "featureType": "poi.business",
         "stylers": [{
             "visibility": "off"
-        }], {
-        // Parks
-        "featureType": "poi.park",
-        "stylers": [{
-            "visibility": "off"
-        }],
+        }], 
         }, {
         // Roads
         "featureType": "road",
