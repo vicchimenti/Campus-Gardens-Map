@@ -160,6 +160,12 @@
             "visibility": "off"
         }],
         }, {
+        // Parks
+        "featureType": "poi.park",
+        "stylers": [{
+            "visibility": "off"
+        }],
+        }, {
         // Water
         "featureType": "water",
         "elementType": "all",
