@@ -164,21 +164,21 @@
         "featureType": "poi.park",
         "elementType": "all",
         "stylers": [{
-            "visibility": "off"
+            "visibility": "on"
         }],
         }, {
         // School
         "featureType": "poi.school",
         "elementType": "all",
         "stylers": [{
-            "visibility": "off"
+            "visibility": "on"
         }],
         }, {
         // School
         "featureType": "poi.sports_complex",
         "elementType": "all",
         "stylers": [{
-            "visibility": "off"
+            "visibility": "on"
         }],
         },{
         // Water
