@@ -414,18 +414,12 @@
     loganFieldMarker.addListener('mouseout', function() {
         $("#PinLabel").hide();
     });
-
-
-//  *** Athletic Fields Markers end ***  //
+    //  *** Athletic Fields Markers end ***  //
 
 
     
 
-    //  *** End of Google Map JavaScript ***  //
- 
-
-
-
+//  *** End of Google Map JavaScript ***  //
 }
 
 
