@@ -176,7 +176,7 @@
         }, {
         // School
         "featureType": "poi.sports_complex",
-        "elementType": "labels",
+        "elementType": "labels.text",
         "stylers": [{
             "visibility": "off"
         }],
