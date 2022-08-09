@@ -344,9 +344,11 @@
 
 }
 
-window.initMap = initMap;
+// window.initMap = initMap;
 
 //   initialize();
+
+initMap();
   
   
 
