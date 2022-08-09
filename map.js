@@ -117,7 +117,7 @@
         mapTypeControl: true,
         fullscreenControl: false,
         mapTypeId: 'roadmap',
-        zoom: 11,
+        zoom: 15,
         //  *** Map style from Snazzy Maps (Blue Water) start ***  //
         styles: [{
         // Land
