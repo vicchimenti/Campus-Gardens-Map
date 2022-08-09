@@ -344,10 +344,14 @@
 
 }
 
-// window.initMap = initMap;
 
-//   initialize();
 
+
+/**
+ * 
+ *  Load the map
+ * 
+ */
 initMap();
   
   
