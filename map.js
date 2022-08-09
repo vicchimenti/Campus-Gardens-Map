@@ -254,42 +254,7 @@
 
 
 
-    //  ***  Cisco Morris   ***  //
-    var ciscoMorrisMarker = new google.maps.Marker({
-        position: {
-        lat: 47.609861,
-        lng: -122.319890
-        },
-        icon: icons['significantGardensIcon'].icon,
-        map: map,
-    });
-    // create variable to store b-coloumn link ID
-    var ciscoMorrisLink = document.getElementById('ciscoMorris');
-    // create object to store Info Box attributes
-    var ciscoMorrisObj = {linkId: ciscoMorrisLink, linkName: 'Cisco Morris Biodiversity', linkDesc: "Description goes here"};
-    // create dom listener for b-coloumn anchor link
-    google.maps.event.addDomListener(ciscoMorrisLink, 'click', function() {
-        map.setZoom(19);
-        map.setCenter(ciscoMorrisMarker.getPosition());
-        modifyTextBox(0, ciscoMorrisObj.linkName, ciscoMorrisObj.linkDesc);
-    });
-    // create click listener for marker
-    ciscoMorrisMarker.addListener('click', function() {
-        map.setZoom(19);
-        map.setCenter(ciscoMorrisMarker.getPosition());
-        modifyTextBox(0, ciscoMorrisObj.linkName, ciscoMorrisObj.linkDesc);
-        $("#PinLabel").hide();
-        openKey(1);
-    });
-    // create mouseover listener for marker label
-    ciscoMorrisMarker.addListener('mouseover', function() {
-        modifyPinLabel(0, "Significant Gardens", ciscoMorrisObj.linkName);
-        $("#POITextBox").hide();
-    });
-    // Click Listener for Pin Labels
-    ciscoMorrisMarker.addListener('mouseout', function() {
-        $("#PinLabel").hide();
-    });
+
 
     //  *** Lee Miley Rain Garden  ***  //
     var rainGardenMarker = new google.maps.Marker({
@@ -370,7 +335,7 @@
 
 
 
-    
+
     //  ***  Edible Campus  ***  //
     var edibleCampusMarker = new google.maps.Marker({
         position: {
