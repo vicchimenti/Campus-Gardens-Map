@@ -278,8 +278,6 @@ var loganFieldMarker = new google.maps.Marker({
     icon: icons['athleticFieldsIcon'].icon,
     map: map,
 });
-
-
 // create variable to store b-coloumn link ID
 var loganFieldLink = document.getElementById('loganField');
 // create object to store Info Box attributes
