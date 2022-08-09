@@ -393,13 +393,13 @@
     var loganFieldObj = {linkId: loganFieldLink, linkName: 'Logan Field Varsity Softball', linkDesc: "Description goes here"};
     // create dom listener for b-coloumn anchor link
     google.maps.event.addDomListener(loganFieldLink, 'click', function() {
-        map.setZoom(19);
+        map.setZoom(18);
         map.setCenter(loganFieldMarker.getPosition());
         modifyTextBox(2, loganFieldObj.linkName, loganFieldObj.linkDesc);
     });
     // create click listener for marker
     loganFieldMarker.addListener('click', function() {
-        map.setZoom(19);
+        map.setZoom(18);
         map.setCenter(loganFieldMarker.getPosition());
         modifyTextBox(2, loganFieldObj.linkName, loganFieldObj.linkDesc);
         $("#PinLabel").hide();
